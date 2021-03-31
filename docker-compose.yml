@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  broadleaf:
+    build: 
+      context: .
+      args:
+        sha: 5dd54a413ebaa898a3aaa08c062609e476440449
+    restart: always
+    ports:
+      # site
+      - 8080:8080
+      - 8443:8443
+      # Admin
+      - 8081:8081
+      - 8444:8444
+      # API
+      - 8082:8082
+      - 8445:8445
